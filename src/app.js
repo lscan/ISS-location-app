@@ -70,7 +70,7 @@ app.get('/weather', (req, res) => {
             })
         }
 
-        forecast(lat, long, (error,{currentTemp, currentPrecipProbability, dailySummary}) => {
+        forecast(lat, long, (error,{currentTemp, currentPrecipProbability, dailySummary, currentWindGust}) => {
             if (error) {
                 return res.send({
                     error: error
@@ -86,7 +86,8 @@ app.get('/weather', (req, res) => {
                 forecastData: {
                     currentTemp,
                     currentPrecipProbability,
-                    dailySummary
+                    dailySummary,
+                    currentWindGust
                 },
                 address
             })

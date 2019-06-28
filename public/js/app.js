@@ -20,7 +20,7 @@ weatherForm.addEventListener('submit', (e) => {
             if(data.error) {
                 setText(data.error, '');
             } else {
-                setText(`Location: ${data.locationData.location}`, `Daily forecast: ${data.forecastData.dailySummary}`)
+                setText(`Location: ${data.locationData.location}`, `Daily forecast: ${data.forecastData.dailySummary}. Current wind gust speed is ${data.forecastData.currentWindGust}mph!!!`)
             }
         })
     })
