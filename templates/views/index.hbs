@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="icon" href="/img/weather.png">
-        <link rel="stylesheet" href="/css/styles.css">        
+        <link rel="icon" href="/img/space-shuttle.png">
+        <link rel="stylesheet" href="/css/styles.css">
+        
+        <title>ISS Location service</title>
+
     </head>
     <body>
         <div class="main-content">
             {{>header}}
-            <p>Use this site to get your weather!</p>
+            <p>Where's the ISS right now? Click the button to find out!</p>
             <form action="">
-                <input placeholder="Location" type="text">
                 <button>Search</button>
             </form>
             <p id="message-one"></p>
             <p id="message-two"></p>
+            <img src="" alt="" id="country-img">
         </div>
         {{>footer}}
         <script src="/js/app.js"></script>

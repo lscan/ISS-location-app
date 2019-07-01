@@ -11,15 +11,8 @@ const reverseGeocode = (lat, long, callback) => {
     request({ url, json: true }, (error, { body } = {}) => {
         if (error) {
             callback('Unable to connect to geocoding service!', {})
-        // } else if (body.features.length < 1) {
-            // callback('Something went wrong or this location is just too uninteresting to reverse geocode!', {})
         } else {
             callback(undefined, {
-                // features: body.features
-                // formatted: body.results[0].formatted,
-                // type: body.results[0].components._type,
-                // body_of_water: body.results[0].components._type,
-                // country: body.results[0].components.country
                 results: body.results
             })
         }
